@@ -8,84 +8,115 @@
   </head>
   <body>
     <style>
-     
+/* ====== COLOR VARIABLES ====== */
+:root {
+    --dark-blue: #0A192F;
+    --navy: #1E1E2F;
+    --white: #FFFFFF;
+    --text-gray: #333333;
+    --accent: #FFB400; /* Gold accent */
+}
+
+/* ====== GLOBAL STYLES ====== */
 body {
     font-family: "Poppins", sans-serif;
     margin: 0;
-    background-color: #FFFFFF;
-    color: #333333; 
+    background-color: var(--white);
+    color: var(--text-gray);
     line-height: 1.6;
 }
 
-
+/* ====== HEADER ====== */
 header {
-    background-color: #1E1E2F; 
-    color: #FFFFFF;
+    background-color: var(--navy);
+    color: var(--white);
     text-align: center;
     padding: 2rem 1rem;
 }
 
+header nav {
+    margin-top: 1rem;
+}
+
 header nav a {
-    color: #FFFFFF;
-    margin: 0 10px;
+    color: var(--white);
+    margin: 0 15px;
     text-decoration: none;
     font-weight: 500;
     transition: color 0.2s ease;
 }
 
 header nav a:hover {
-    color: #FFB400; 
+    color: var(--accent);
 }
 
-
+/* ====== HERO SECTION ====== */
 .section {
     padding: 3rem 1rem;
     text-align: center;
 }
 
+.profile-pic {
+    width: 150px;
+    border-radius: 50%;
+    margin-bottom: 1rem;
+    border: 3px solid var(--white);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* ====== PROJECT GRID ====== */
 .project-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-auto-rows: 300px; /* Fixed height for all cards */
+    grid-template-rows: repeat(2, auto);
     gap: 1.5rem;
     margin-top: 2rem;
 }
 
-
-
 .project-card {
-    background-color: #0A192F; 
-    color: #FFFFFF;
+    background-color: var(--dark-blue);
+    color: var(--white);
     padding: 1.5rem;
     border-radius: 10px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .project-card:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+    transform: translateY(-6px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+}
+
+.project-card h3 {
+    margin-top: 0;
+    color: var(--accent);
 }
 
 .project-card p {
     margin-bottom: 0.5rem;
 }
 
-
-.profile-pic {
-    width: 150px;
-    border-radius: 50%;
-    margin-bottom: 1rem;
-    border: 3px solid #FFFFFF; 
-}
-
-
+/* ====== FOOTER ====== */
 footer {
     text-align: center;
     padding: 1rem;
-    background-color: #1E1E2F;
-    color: #FFFFFF;
+    background-color: var(--navy);
+    color: var(--white);
     font-size: 0.9rem;
+}
+
+/* ====== RESPONSIVE DESIGN ====== */
+@media (max-width: 900px) {
+    .project-grid {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: auto;
+    }
+}
+
+@media (max-width: 600px) {
+    .project-grid {
+        grid-template-columns: 1fr;
+    }
 }
 
     </style>
@@ -221,6 +252,7 @@ footer {
     <script src="script.js"></script>
   </body>
 </html>
+
 
 
 
