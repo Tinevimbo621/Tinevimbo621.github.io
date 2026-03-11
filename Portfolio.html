@@ -40,13 +40,27 @@
         margin-top: 2rem;
       }
 
-      .project-card {
-        background-color: #0A192F;
-        color: white;
-        padding: 1.5rem;
-        border-radius: 10px;
-        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-      }
+  .project-card {
+    background-color: #0A192F; /* Dark blue background */
+    color: #FFFFFF; /* White text */
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15); /* Slightly stronger shadow for depth */
+    transition: transform 0.2s ease, box-shadow 0.2s ease; /* Smooth hover effect */
+}
+
+/* Optional: Hover effect for interactivity */
+.project-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Optional: Improve text readability */
+.project-card p {
+    line-height: 1.6;
+    margin-bottom: 0.5rem;
+}
+
 
       .profile-pic {
         width: 150px;
@@ -193,6 +207,7 @@
     <script src="script.js"></script>
   </body>
 </html>
+
 
 
 
