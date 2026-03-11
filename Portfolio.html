@@ -8,72 +8,85 @@
   </head>
   <body>
     <style>
-      body {
-        font-family: "Poppins", sans-serif;
-        margin: 0;
-        background-color: white;
-        color: #333;
-      }
-
-      header {
-        background-color: #1e1e2f;
-        color: #fff;
-        text-align: center;
-        padding: 2rem 1rem;
-      }
-
-      header nav a {
-        color: #fff;
-        margin: 0 10px;
-        text-decoration: none;
-      }
-
-      .section {
-        padding: 3rem 1rem;
-        text-align: center;
-      }
-
-      .project-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-        gap: 1.5rem;
-        margin-top: 2rem;
-      }
-
-  .project-card {
-    background-color: #0A192F; /* Dark blue background */
-    color: #FFFFFF; /* White text */
-    padding: 1.5rem;
-    border-radius: 10px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15); /* Slightly stronger shadow for depth */
-    transition: transform 0.2s ease, box-shadow 0.2s ease; /* Smooth hover effect */
+      /* Base Styles */
+body {
+    font-family: "Poppins", sans-serif;
+    margin: 0;
+    background-color: #FFFFFF; /* White background */
+    color: #333333; /* Dark gray text for readability */
+    line-height: 1.6;
 }
 
-/* Optional: Hover effect for interactivity */
+/* Header */
+header {
+    background-color: #1E1E2F; /* Dark navy */
+    color: #FFFFFF;
+    text-align: center;
+    padding: 2rem 1rem;
+}
+
+header nav a {
+    color: #FFFFFF;
+    margin: 0 10px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.2s ease;
+}
+
+header nav a:hover {
+    color: #FFB400; /* Gold accent on hover */
+}
+
+/* Sections */
+.section {
+    padding: 3rem 1rem;
+    text-align: center;
+}
+
+/* Project Grid */
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+/* Project Card */
+.project-card {
+    background-color: #0A192F; /* Deep dark blue */
+    color: #FFFFFF;
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
 .project-card:hover {
     transform: translateY(-4px);
     box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
 }
 
-/* Optional: Improve text readability */
 .project-card p {
-    line-height: 1.6;
     margin-bottom: 0.5rem;
 }
 
+/* Profile Picture */
+.profile-pic {
+    width: 150px;
+    border-radius: 50%;
+    margin-bottom: 1rem;
+    border: 3px solid #FFFFFF; /* White border for contrast */
+}
 
-      .profile-pic {
-        width: 150px;
-        border-radius: 50%;
-        margin-bottom: 1rem;
-      }
+/* Footer */
+footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: #1E1E2F;
+    color: #FFFFFF;
+    font-size: 0.9rem;
+}
 
-      footer {
-        text-align: center;
-        padding: 1rem;
-        background-color: #1e1e2f;
-        color: #fff;
-      }
     </style>
     <header>
       <div class="container">
@@ -207,6 +220,7 @@
     <script src="script.js"></script>
   </body>
 </html>
+
 
 
 
